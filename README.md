@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
 # Install Angular Material
-Use the Angular CLI's installation schematic to set up your Angular Material project by running the following command: ng add @angular/material
+ng add @angular/material
 
 ## Development server
 
