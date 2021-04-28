@@ -1,0 +1,20 @@
+<div class="container">
+  <form class="example-form" [formGroup]="form" (ngSubmit)="onUpdate()" novalidate>
+    <mat-form-field class="example-full-width field" >
+      <mat-label>Título</mat-label>
+      <input  matInput placeholder="Ingrese el título" formControlName="title" type="text">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="field">
+      <mat-label>Estado</mat-label>
+      <mat-select formControlName="selectedValue">
+        <mat-option *ngFor="let option of options" [value]="option.value" >
+          {{option.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="row-buttons">
+      <button type="submit" mat-raised-button class="button" [disabled]="form.invalid">Actualizar</button>
+    </div>
+  </form>
+</div>

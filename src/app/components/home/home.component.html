@@ -1,0 +1,26 @@
+<div class="container">
+  <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+    <mat-form-field class="example-full-width field" >
+      <mat-label>Título</mat-label>
+      <input matInput placeholder="Ingrese el título" formControlName="title" type="text">
+    </mat-form-field>
+
+    <div *ngIf="title.invalid && title.dirty" class="errors">
+      <p *ngIf="title.errors.required">El campo título debe completarse</p>
+    </div>
+
+    <mat-form-field appearance="fill" class="field">
+      <mat-label>Estado</mat-label>
+      <mat-select formControlName="selectedValue">
+        <mat-option *ngFor="let option of options" [value]="option.value" >
+          {{option.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="row-buttons">
+      <button type="button" mat-raised-button class="button" (click)="form.reset({})">Cancelar</button>
+      <button type="submit" mat-raised-button class="button" [disabled]="form.invalid">Crear</button>
+      <!-- routerLink="/tasks" -->
+    </div>
+  </form>
+</div>

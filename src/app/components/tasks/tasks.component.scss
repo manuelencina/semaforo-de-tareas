@@ -1,0 +1,62 @@
+.column {
+  width: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.grid-container {
+  width: 80%;
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+  color: #fff;
+}
+
+.bg-red {
+  background-color: #fe6d73;
+}
+.bg-yellow {
+  background-color: #ffcb77;
+}
+.bg-green {
+  background-color: #17c3b2;
+}
+.grid-container {
+  display: flex;
+}
+.main-container {
+  display: flex;
+  width: 80%;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-button {
+  padding: 0 3em;
+}
+.button {
+  background-color: #fe6d73;
+}
+.row-button {
+  display: flex;
+  align-items: center;
+}
+.row-button span {
+  width: 90%;
+}
+.del-icon {
+  color: #fff;
+  cursor: pointer;
+}

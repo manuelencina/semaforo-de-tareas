@@ -1,0 +1,28 @@
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+.field {
+  margin-top: 3em;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+.example-full-width {
+  width: 100%;
+}
+.errors p {
+  color: red;
+}
+.row-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+.button {
+  margin-left: 1.5em;
+  width: 20%;
+}

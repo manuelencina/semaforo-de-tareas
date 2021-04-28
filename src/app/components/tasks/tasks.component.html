@@ -1,0 +1,30 @@
+<div class="contenedor">
+  <div class="main-container">
+    <div  class="grid-container">
+      <!-- <app-task  *ngFor="let task of finished" class="column" taskTitle="task.title">
+      </app-task> -->
+      <div  *ngFor="let task of finished" class="column" >
+        <mat-card *ngIf="task.state === 'Terminada'" class="row bg-green">{{task.title}}</mat-card>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div  *ngFor="let task of inProgress" class="column" >
+        <mat-card *ngIf="task.state === 'En proceso'" class="row bg-yellow">{{task.title}}</mat-card>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div  *ngFor="let task of initiated; let i = index" class="column">
+        <mat-card *ngIf="task.state === 'Iniciada'" class="row row-button bg-red" (click)="updateTask(task.title)"><span>{{task.title}}</span><mat-icon class="del-icon" (click)="deleteTask(i)">delete_outline</mat-icon></mat-card>
+      </div>
+    </div>
+  </div>
+  <div class="box-button">
+    <button mat-fab type="button" (click)="onClick()" mat-raised-button class="button" routerLink="/">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+</div>
+
+<!-- <button type="button" (click)="onClick()" mat-raised-button class="button" routerLink="/">Regresar</button> -->
+
